@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/404.html"/>
+    <link rel="canonical" href="http://example.com/2025/02/13/day-3/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -22,14 +22,17 @@
     
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Page Not Found">
-<meta property="og:url" content="http://example.com/404.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day - 3 - Database">
+<meta property="og:url" content="http://example.com/2025/02/13/Day-3/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-02-13T14:39:14.000Z">
+<meta property="article:modified_time" content="2025-02-13T14:40:44.141Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Backend">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
     
@@ -43,7 +46,7 @@
     
     <title>
         
-            Page Not Found | 21 Engineer
+            Day - 3 - Database | 21 Engineer
         
     </title>
 
@@ -536,28 +539,238 @@
 			
 
 			<div class="main-content">
-				<div class="page-template-container">
-	
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
 
-	
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Day - 3 - Database</h1>
+			</div>
+			
+		</div>
 
-	<div class="page-template-content markdown-body">
 		
-		<h1>Page Not Found</h1>
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/head.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Tung-Yu Chiang</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-02-13 22:39:14</span>
+        <span class="mobile">2025-02-13 22:39:14</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-02-13 22:40:44</span>
+            <span class="mobile">2025-02-13 22:40:44</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Backend/">Backend</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
 		
 
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="Day-3-目標"><a href="#Day-3-目標" class="headerlink" title="Day 3 目標"></a><strong>Day 3 目標</strong></h2><table>
+<thead>
+<tr>
+<th><strong>學習內容</strong></th>
+<th><strong>實作</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>資料庫（PostgreSQL + SQLAlchemy）</td>
+<td>設計數據庫模型，整合 SQLAlchemy 進行數據存取</td>
+</tr>
+</tbody></table>
+<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><h3 id="Model（SQLAlchemy-ORM-模型）-→-負責資料庫"><a href="#Model（SQLAlchemy-ORM-模型）-→-負責資料庫" class="headerlink" title="Model（SQLAlchemy ORM 模型） → 負責資料庫"></a>Model（SQLAlchemy ORM 模型） → 負責資料庫</h3><p>👉 Model 主要是跟資料庫打交道，對應到資料庫表（table）</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Product</span>(<span class="title class_ inherited__">Base</span>):</span><br><span class="line">    __tablename__ = <span class="string">&#x27;products&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>, index=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String, index=<span class="literal">True</span>)</span><br><span class="line">    description = Column(String, index=<span class="literal">True</span>)</span><br><span class="line">    price = Column(Float) </span><br></pre></td></tr></table></figure></div>
+<h3 id="Schema（Pydantic-模型）-→-負責-API-數據驗證"><a href="#Schema（Pydantic-模型）-→-負責-API-數據驗證" class="headerlink" title="Schema（Pydantic 模型） → 負責 API 數據驗證"></a>Schema（Pydantic 模型） → 負責 API 數據驗證</h3><p>👉 Schema 主要用來驗證 API 的輸入&#x2F;輸出數據，讓 FastAPI 確保請求數據正確！</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ProductSchema</span>(<span class="title class_ inherited__">BaseModel</span>):</span><br><span class="line">    <span class="built_in">id</span>: <span class="built_in">int</span></span><br><span class="line">    name: <span class="built_in">str</span></span><br><span class="line">    description: <span class="type">Optional</span>[<span class="built_in">str</span>] = <span class="literal">None</span></span><br><span class="line">    price: <span class="built_in">float</span> </span><br></pre></td></tr></table></figure></div>
+
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><h4 id="1-使用-Schema（Pydantic）驗證-API-請求"><a href="#1-使用-Schema（Pydantic）驗證-API-請求" class="headerlink" title="1. 使用 Schema（Pydantic）驗證 API 請求"></a>1. 使用 Schema（Pydantic）驗證 API 請求</h4><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#router/product.py</span></span><br><span class="line"><span class="meta">@router.post(<span class="params"><span class="string">&quot;/products/&quot;</span>, response_model=ProductSchema</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_product</span>(<span class="params">product: ProductCreate, db: Session = Depends(<span class="params">get_db</span>)</span>):</span><br><span class="line">    <span class="keyword">return</span> product_service.create_product(db, product)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>ProductCreate：確保 API 的請求數據正確。</li>
+<li>response_model&#x3D;ProductSchema：確保回應時符合 ProductSchema，可以轉成 JSON。</li>
+</ul>
+<h4 id="2-使用-Model（SQLAlchemy-ORM）存入資料庫"><a href="#2-使用-Model（SQLAlchemy-ORM）存入資料庫" class="headerlink" title="2. 使用 Model（SQLAlchemy ORM）存入資料庫"></a>2. 使用 Model（SQLAlchemy ORM）存入資料庫</h4><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_product</span>(<span class="params">db: Session, product: ProductSchema</span>) -&gt; Product:</span><br><span class="line">    new_product = Product(<span class="built_in">id</span>=product.<span class="built_in">id</span>, name=product.name, description=product.description, price=product.price)</span><br><span class="line">    db.add(new_product)</span><br><span class="line">    db.commit()</span><br><span class="line">    db.refresh(new_product)</span><br><span class="line">    <span class="keyword">return</span> new_product</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>ProductCreate 是 API 傳來的數據</li>
+<li>轉換成 Product ORM 物件後，存入 PostgreSQL</li>
+<li>回傳 Product ORM 物件（但 orm_mode &#x3D; True 讓它可以轉 JSON）</li>
+</ul>
+<h3 id="FastAPI-IoC-Dependency-Injection"><a href="#FastAPI-IoC-Dependency-Injection" class="headerlink" title="FastAPI IoC &amp; Dependency Injection"></a>FastAPI IoC &amp; Dependency Injection</h3><h4 id="1️⃣-什麼是-IoC（控制反轉）？"><a href="#1️⃣-什麼是-IoC（控制反轉）？" class="headerlink" title="1️⃣ 什麼是 IoC（控制反轉）？"></a>1️⃣ 什麼是 IoC（控制反轉）？</h4><p>IoC（Inversion of Control） 是一種設計模式，它的核心概念是：<br>✅ 程式的控制權從手動管理，交給框架來處理。<br>✅ 降低模組之間的耦合度，提高靈活性。<br>✅ 由框架負責創建 &amp; 傳遞依賴物件，而不是手動初始化。<br>在傳統寫法中，我們會這樣手動管理資料庫 Session：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_product</span>():</span><br><span class="line">    db = SessionLocal()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 操作資料庫</span></span><br><span class="line">        ...</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        db.close()</span><br></pre></td></tr></table></figure></div>
+<p>這種做法雖然直觀，但：</p>
+<ul>
+<li>需要手動管理 db 連線</li>
+<li>每個函數都要寫 db &#x3D; SessionLocal()&lt;</li>
+<li>不能自動回收 db</li>
+</ul>
+<h4 id="2️⃣-FastAPI-的-Depends-get-db-如何應用-IoC？"><a href="#2️⃣-FastAPI-的-Depends-get-db-如何應用-IoC？" class="headerlink" title="2️⃣ FastAPI 的 Depends(get_db) 如何應用 IoC？"></a>2️⃣ FastAPI 的 Depends(get_db) 如何應用 IoC？</h4><p>FastAPI 的 Depends(get_db) 是一種 依賴注入（Dependency Injection, DI），它允許：<br>✅ FastAPI 自動管理 db，不需要手動初始化<br>✅ 確保 db 連線在請求結束後自動關閉<br>✅ 提升程式的可讀性與可維護性</p>
+<p>🔹 get_db() 提供 Session</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_db</span>():</span><br><span class="line">    db = SessionLocal()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">yield</span> db</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        db.close() </span><br></pre></td></tr></table></figure></div>
+<p>這裡的 yield db 讓 FastAPI 管理 db 的生命週期，這就是 IoC（控制反轉） 的概念。</p>
+<p>🔹 Depends(get_db) 自動注入 db</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@router.post(<span class="params"><span class="string">&quot;/products/&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_product</span>(<span class="params">product: ProductCreate, db: Session = Depends(<span class="params">get_db</span>)</span>):</span><br><span class="line">    <span class="keyword">return</span> product_service.create_product(db, product)</span><br></pre></td></tr></table></figure></div>
+<p>這邊的 Depends(get_db)：</p>
+<ol>
+<li>FastAPI 會自動呼叫 get_db()</li>
+<li>yield db 會把 Session 傳入 db 參數</li>
+<li>請求結束後，FastAPI 自動關閉 db</li>
+</ol>
+<p>這樣開發者不需要手動管理 db。</p>
+<h2 id="PostSQL-Install"><a href="#PostSQL-Install" class="headerlink" title="PostSQL Install"></a>PostSQL Install</h2><h3 id="Issue"><a href="#Issue" class="headerlink" title="Issue"></a>Issue</h3><p>不知道為什麼，我在這邊特別不順，碰到了幾個問題，但多數都可以跟 gpt 溝通，然後解決</p>
+<p>FATAL:  could not open lock file “&#x2F;tmp&#x2F;.s.PGSQL.5432.lock”: Permission denied</p>
+<p>主要解決辦法是</p>
+<p><strong>修正 <code>/private/tmp</code> 權限</strong></p>
+<p>請執行：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 1777 /private/t</span><br></pre></td></tr></table></figure></div>
+
+<p>然後再次檢查：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -ld /private/tmp</span><br></pre></td></tr></table></figure></div>
+
+<p>應該會顯示：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drwxrwxrwt  30 root  wheel  1020 Feb 9 16:22 /private/tmp</span><br></pre></td></tr></table></figure></div>
+
+<p>如果權限正確，嘗試重新啟動 PostgreSQL</p>
+
+		</div>
+
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Backend/">#Backend</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/02/12/Day-2-FastAPI-Router/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Day 2 - FastAPI Router</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
 		
 	</div>
 
-	<div class="page-template-comments">
-		
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Day - 3 - Database</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-3-%E7%9B%AE%E6%A8%99"><span class="nav-text">Day 3 目標</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Database"><span class="nav-text">Database</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Model%EF%BC%88SQLAlchemy-ORM-%E6%A8%A1%E5%9E%8B%EF%BC%89-%E2%86%92-%E8%B2%A0%E8%B2%AC%E8%B3%87%E6%96%99%E5%BA%AB"><span class="nav-text">Model（SQLAlchemy ORM 模型） → 負責資料庫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Schema%EF%BC%88Pydantic-%E6%A8%A1%E5%9E%8B%EF%BC%89-%E2%86%92-%E8%B2%A0%E8%B2%AC-API-%E6%95%B8%E6%93%9A%E9%A9%97%E8%AD%89"><span class="nav-text">Schema（Pydantic 模型） → 負責 API 數據驗證</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B"><span class="nav-text">流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FastAPI-IoC-Dependency-Injection"><span class="nav-text">FastAPI IoC &amp; Dependency Injection</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PostSQL-Install"><span class="nav-text">PostSQL Install</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue"><span class="nav-text">Issue</span></a></li></ol></li></ol>
+
 	</div>
 </div>
-
-<div class="paginator">
+	</div>
 	
 </div>
-  
 			</div>
 
 			
@@ -635,6 +848,26 @@
 		</div>
 	</div>
 
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
 	
 
 	<div class="right-side-tools-container">
@@ -717,6 +950,7 @@
         containers: ["#swup"],
     });
 </script>
+
 
 
 
