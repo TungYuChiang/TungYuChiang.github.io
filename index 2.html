@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/02/19/day-4-jwt/"/>
+    <link rel="canonical" href="http://example.com/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -22,17 +22,14 @@
     
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Day-4 JWT">
-<meta property="og:url" content="http://example.com/2025/02/19/Day-4-JWT/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-02-19T14:23:17.000Z">
-<meta property="article:modified_time" content="2025-03-04T14:43:06.832Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Backend">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
     
@@ -46,7 +43,7 @@
     
     <title>
         
-            Day-4 JWT | 21 Engineer
+            21 Engineer - Hacked to Freedom
         
     </title>
 
@@ -279,17 +276,125 @@
 <main class="page-container" id="swup">
 
 	
+	
+    <style>
+        .home-banner-container {
+            background: none !important;
+        }
+        .home-article-item,
+        .sidebar-links,
+        .sidebar-content,
+        a.page-number,
+        a.extend,
+        .sidebar-links .links:hover,
+        .right-bottom-tools,
+        footer.footer {
+            background-color: var(--background-color-transparent-80) !important;
+        }
+        .right-bottom-tools:hover,
+        a.page-number:hover,
+        a.extend:hover {
+            background-color: var(--primary-color) !important;
+        }
+        .site-info,
+        .home-article-sticky-label {
+            background-color: var(--background-color-transparent-15) !important;
+        }
+        .home-article-sticky-label {
+            backdrop-filter: none !important;
+        }
+    </style>
+    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
+        <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
+        <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+    </div>
+
+
+<div class="home-banner-container flex justify-center items-center transition-fade relative">
+    
+    <div class="content mt-8 flex flex-col justify-center items-center transition-fade-down">
+        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
+        
+        >
+            Code Liberates
+            
+            
+                <p><i id="subtitle"></i></p>
+            
+        </div>
+        
+            
+            <div class="absolute bottom-0.5 flex flex-row justify-between max-w-[1340px] items-center w-full px-8 sm:px-12">
+                <div class="flex p-3 bg-gray-300/50 dark:bg-gray-500/40 backdrop-blur-lg border border-white/20 dark:border-gray-500/30 group rounded-full cursor-pointer flex justify-center items-center aspect-square h-full shadow-redefine-flat hover:shadow-redefine-flat-hover transition-shadow" onclick="scrollToMain()" >
+                    <i class="fa-solid fa-arrow-down fa-fw fa-lg group-hover:translate-y-1 transition-transform"></i>
+                </div>
+                <div class="social-contacts px-6 py-3 bg-gray-300/50 dark:bg-gray-500/40 backdrop-blur-lg border border-white/20 dark:border-gray-500/30 shadow-redefine-flat rounded-full flex flex-row gap-3 items-center">
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                                <span class="social-contact-item">
+                                    <a target="_blank" href="https://github.com/TungYuChiang">
+                                        <i class="fa-brands fa-github fa-fw fa-lg"></i>
+                                    </a>
+                                </span>
+                            
+                        
+                    
+                        
+                            
+                                <span class="social-contact-item">
+                                    <a target="_blank" href="https://www.instagram.com/tung_0319/?hl=en">
+                                        <i class="fa-brands fa-instagram fa-fw fa-lg"></i>
+                                    </a>
+                                </span>
+                            
+                        
+                    
+                        
+                            
+                                <span class="social-contact-item">
+                                    <a target="_blank" href="https://www.linkedin.com/in/東諭-江-0697a9264/">
+                                        <i class="fa-brands fa-linkedin fa-fw fa-lg"></i>
+                                    </a>
+                                </span>
+                            
+                        
+                    
+                    
+                </div>
+            </div>
+        
+    </div>
+    <script>
+        const scrollToMain = ()=> {
+            console.log('scroll');
+            const target = document.querySelector('.main-content-container');
+            target.scrollIntoView({ behavior: 'smooth'});
+        }
+    </script>
+</div>
+	
 
 	<div class="main-content-container flex flex-col justify-between min-h-dvh">
 		<div class="main-content-header">
 			<header class="navbar-container px-6 md:px-12">
-    <div class="navbar-content transition-navbar ">
+    <div class="navbar-content transition-navbar has-home-banner">
         <div class="left">
             
             <a class="logo-title" href="/">
-                
+                <h1>
                 21 Engineer
-                
+                </h1>
             </a>
         </div>
 
@@ -303,7 +408,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class=""
+                                <a class="active"
                                    href="/"
                                         >
                                     <i class="fa-regular fa-house fa-fw"></i>
@@ -404,7 +509,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
                            href="/"
                         >
                             <span>
@@ -522,7 +627,7 @@
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -537,292 +642,485 @@
 
 		<div class="main-content-body transition-fade-up">
 			
-
-			<div class="main-content">
-				<div class="post-page-container flex relative justify-between box-border w-full h-full">
-	<div class="article-content-container">
-
-		<div class="article-title relative w-full">
-			
-			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Day-4 JWT</h1>
-			</div>
-			
-		</div>
-
-		
-		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
-			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
-				<img src="/images/tungyu.jpg">
-			</div>
-			<div class="info flex flex-col justify-between">
-				<div class="author flex items-center">
-					<span class="name text-default-text-color text-lg font-semibold">Tung-Yu Chiang</span>
-					
-					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
-					
-				</div>
-				<div class="meta-info">
-					<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-02-19 22:23:17</span>
-        <span class="mobile">2025-02-19 22:23:17</span>
-        <span class="hover-info">Created</span>
-    </span>
-    
-        <span class="article-date article-meta-item">
-            <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-03-04 22:43:06</span>
-            <span class="mobile">2025-03-04 22:43:06</span>
-            <span class="hover-info">Updated</span>
-        </span>
-    
-
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fa-regular fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/Backend/">Backend</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-
-    
-    
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
-
-				</div>
-			</div>
-		</div>
-		
-
-		
-
-
-		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h2 id="Day-4-目標"><a href="#Day-4-目標" class="headerlink" title="Day 4 目標"></a><strong>Day 4 目標</strong></h2><table>
-<thead>
-<tr>
-<th><strong>學習內容</strong></th>
-<th><strong>實作</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>使用者驗證（JWT + OAuth2）</td>
-<td>用戶註冊、登入，實作 JWT 驗證與權限管理</td>
-</tr>
-</tbody></table>
-<h2 id="什麼是JWT"><a href="#什麼是JWT" class="headerlink" title="什麼是JWT"></a>什麼是JWT</h2><p>這個很多文章都已經講得很好了，我就不在重複敘述，古古前輩我感覺寫的很清楚又簡單，可以直接閱讀那四篇跟jwt有關的文章，連接在此：<a class="link"   target="_blank" rel="noopener" href="https://kucw.io/blog/session-vs-jwt/" >古古 jwt 文章<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>。</p>
-<h2 id="Code-Review"><a href="#Code-Review" class="headerlink" title="Code Review"></a>Code Review</h2><p>這次新增</p>
-<ul>
-<li>User Module</li>
-<li>JWT</li>
-</ul>
-<h3 id="JWT-Implementation"><a href="#JWT-Implementation" class="headerlink" title="JWT Implementation"></a>JWT Implementation</h3><p>這節會分享一些 jwt api 串接的實作</p>
-<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">SECRET_KEY = <span class="string">&quot;your_secret_key&quot;</span></span><br><span class="line">ALGORITHM = <span class="string">&quot;HS256&quot;</span></span><br><span class="line">ACCESS_TOKEN_EXPIRE_MINUTES = <span class="number">30</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JWTService</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, secret_key: <span class="built_in">str</span> = SECRET_KEY, algorithm: <span class="built_in">str</span> = ALGORITHM, access_token_expire_minutes: <span class="built_in">int</span> = ACCESS_TOKEN_EXPIRE_MINUTES</span>):</span><br><span class="line">        <span class="variable language_">self</span>.secret_key = secret_key</span><br><span class="line">        <span class="variable language_">self</span>.algorithm = algorithm</span><br><span class="line">        <span class="variable language_">self</span>.access_token_expire_minutes = access_token_expire_minutes</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">create_access_token</span>(<span class="params">self, data: <span class="built_in">dict</span>, expires_delta: timedelta = <span class="literal">None</span></span>):</span><br><span class="line">        to_encode = data.copy()</span><br><span class="line">        <span class="keyword">if</span> expires_delta:</span><br><span class="line">            expire = datetime.utcnow() + expires_delta</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            expire = datetime.utcnow() + timedelta(minutes=<span class="variable language_">self</span>.access_token_expire_minutes)</span><br><span class="line">        to_encode.update(&#123;<span class="string">&quot;exp&quot;</span>: expire&#125;)</span><br><span class="line">        encoded_jwt = jwt.encode(to_encode, <span class="variable language_">self</span>.secret_key, algorithm=<span class="variable language_">self</span>.algorithm)</span><br><span class="line">        <span class="keyword">return</span> encoded_jwt </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decode_access_token</span>(<span class="params">self, token: <span class="built_in">str</span></span>):</span><br><span class="line">        <span class="keyword">return</span> jwt.decode(token, <span class="variable language_">self</span>.secret_key, algorithms=[<span class="variable language_">self</span>.algorithm])</span><br></pre></td></tr></table></figure></div>
-<p>這邊可以看到兩個主要Function：</p>
-<ul>
-<li>create_access_token</li>
-<li>decode_access_token</li>
-</ul>
-<h4 id="create-access-token"><a href="#create-access-token" class="headerlink" title="create_access_token"></a>create_access_token</h4><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_access_token</span>(<span class="params">self, data: <span class="built_in">dict</span>, expires_delta: timedelta = <span class="literal">None</span></span>):</span><br><span class="line">        to_encode = data.copy()</span><br><span class="line">        <span class="keyword">if</span> expires_delta:</span><br><span class="line">            expire = datetime.utcnow() + expires_delta</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            expire = datetime.utcnow() + timedelta(minutes=<span class="variable language_">self</span>.access_token_expire_minutes)</span><br><span class="line">        to_encode.update(&#123;<span class="string">&quot;exp&quot;</span>: expire&#125;)</span><br><span class="line">        encoded_jwt = jwt.encode(to_encode, <span class="variable language_">self</span>.secret_key, algorithm=<span class="variable language_">self</span>.algorithm)</span><br><span class="line">        <span class="keyword">return</span> encoded_jwt </span><br></pre></td></tr></table></figure></div>
-<p><strong>產生 JWT Token</strong>，主要流程如下：</p>
-<ol>
-<li><code>to_encode = data.copy()</code>：複製傳入的 <code>data</code>（通常是用戶 ID 或其他身份相關資訊）。</li>
-<li>計算 <strong>過期時間</strong>：<ul>
-<li>如果 <code>expires_delta</code> 被提供，則使用它來計算過期時間。</li>
-<li>否則，使用預設的 <code>ACCESS_TOKEN_EXPIRE_MINUTES</code>（30 分鐘）。</li>
-</ul>
-</li>
-<li><code>to_encode.update(&#123;&quot;exp&quot;: expire&#125;)</code>：將過期時間（<code>exp</code>）加入到 JWT 的 Payload。</li>
-<li>使用 <code>jwt.encode()</code> 進行編碼，並回傳 JWT Token。</li>
-</ol>
-<h4 id="decode-access-token"><a href="#decode-access-token" class="headerlink" title="decode_access_token"></a>decode_access_token</h4><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python</span><br><span class="line">CopyEdit</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decode_access_token</span>(<span class="params">self, token: <span class="built_in">str</span></span>):</span><br><span class="line">    <span class="keyword">return</span> jwt.decode(token, <span class="variable language_">self</span>.secret_key, algorithms=[<span class="variable language_">self</span>.algorithm])</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>解碼 JWT Token</strong>，主要流程：</p>
-<ol>
-<li><code>jwt.decode()</code> 會解析 JWT 並驗證：<ul>
-<li>Token 是否有效</li>
-<li>Token 是否過期（<code>exp</code>）</li>
-<li>Token 是否使用正確的密鑰與演算法</li>
-</ul>
-</li>
-<li>如果成功，回傳解碼後的資料。</li>
-<li>如果失敗（例如 Token 過期或密鑰錯誤），則會拋出 <code>jwt.ExpiredSignatureError</code> 或 <code>jwt.InvalidTokenError</code>。</li>
-</ol>
-<h3 id="在哪邊使用JWT"><a href="#在哪邊使用JWT" class="headerlink" title="在哪邊使用JWT"></a>在哪邊使用JWT</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@router.post(<span class="params"><span class="string">&quot;/login&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">login_for_access_token</span>(<span class="params">form_data: OAuth2PasswordRequestForm = Depends(<span class="params"></span>), db: Session = Depends(<span class="params">get_db</span>)</span>):</span><br><span class="line">    user = authenticate_user(db, form_data.username, form_data.password)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> user:</span><br><span class="line">        <span class="keyword">raise</span> HTTPException(status_code=<span class="number">400</span>, detail=<span class="string">&quot;Incorrect username or password&quot;</span>)</span><br><span class="line">    access_token = create_access_token(data=&#123;<span class="string">&quot;sub&quot;</span>: user.username&#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;access_token&quot;</span>: access_token, <span class="string">&quot;token_type&quot;</span>: <span class="string">&quot;bearer&quot;</span>&#125; </span><br></pre></td></tr></table></figure></div>
-<p>這個 function 是在驗證使用者是否存在及密碼是否正確，若是正確則創建一個jwt token 並回傳給前端</p>
-<ul>
-<li><strong>OAuth2PasswordRequestForm</strong> 是 FastAPI 提供的 <strong>表單驗證</strong>，用於獲取 <code>username</code> 和 <code>password</code>。</li>
-</ul>
-<p>也因此我們使用 postman 驗證的時候並不是在 body 傳送 json 資料，而是使用x-www-form-urlencoded，並輸入</p>
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>username</td>
-<td>your_user_name</td>
-</tr>
-<tr>
-<td>password</td>
-<td>yoou_password</td>
-</tr>
-</tbody></table>
-<h3 id="JWT-驗證範例"><a href="#JWT-驗證範例" class="headerlink" title="JWT 驗證範例"></a>JWT 驗證範例</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@router.post(<span class="params"><span class="string">&quot;/products/&quot;</span>, response_model=ProductSchema</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">create_product_endpoint</span>(<span class="params">product: ProductSchema, db: Session = Depends(<span class="params">get_db</span>), current_user: User = Depends(<span class="params">get_current_user</span>)</span>):</span><br><span class="line">    <span class="keyword">return</span> create_product(db, product)</span><br></pre></td></tr></table></figure></div>
-<p>在我們原本的 router 上面我們加上了 <code>current_user: User = Depends(get_current_user)</code></p>
-<ul>
-<li>這個 <code>get_current_user()</code> 會：<ul>
-<li><strong>從 <code>Authorization: Bearer &lt;token&gt;</code> 解析 JWT</strong>。</li>
-<li><strong>驗證 Token 是否有效（未過期、未修改、密鑰正確）</strong>。</li>
-<li><strong>回傳解碼後的 <code>User</code> 資訊</strong>（例如 <code>username</code>、<code>user_id</code>）。</li>
-</ul>
-</li>
-<li><strong>沒有 Token 或 Token 無效</strong>：<ul>
-<li>FastAPI <strong>會直接回傳 <code>401 Unauthorized</code>，不會執行 <code>delete_product_endpoint</code></strong>。</li>
-</ul>
-</li>
-<li><strong>影響：</strong><ul>
-<li>原本的 <code>JWTService</code> 的 <code>decode_access_token()</code> 方法會被 <code>get_current_user()</code> 使用。</li>
-<li>這確保只有<strong>登入的使用者</strong>才能創造產品。</li>
-</ul>
-</li>
-</ul>
-<h4 id="PostMan-測試"><a href="#PostMan-測試" class="headerlink" title="PostMan 測試"></a>PostMan 測試</h4><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/jwt1.png"
-                      alt="jwt test faild"
-                >如上圖，如果我們沒有帶入 jwt token 就直接創造一個商品，FastAPI 會直接回傳 <code>401 Unauthorized</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/post/jwt2.png"
-                      alt="jwt test success"
-                ><br>當我們帶入登入後所獲得的 jwt ， API 才能通過審核，被合理的使用</p>
-
-		</div>
-
-		
-
-		
-		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/Backend/">#Backend</a>&nbsp;
-			</li>
-			
-		</ul>
-		
-
-		
-
-		
-		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
-			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/03/04/RabbitMQ-1/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">RabbitMQ (1)</span>
-						<span class="post-nav-item">Prev posts</span>
-					</span>
-				</a>
-			</div>
-			
-			
-			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/02/13/Day-3/">
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">Day - 3 IoC &amp; Database</span>
-						<span class="post-nav-item">Next posts</span>
-					</span>
-					<span class="right arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-right"></i>
-					</span>
-				</a>
-			</div>
-			
-		</div>
-		
-
-
-		
-		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
-			<div class="comments-container mt-10 w-full ">
-    <div id="comment-anchor" class="w-full h-2.5"></div>
-    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
-        Comments
-    </div>
-    
-
+			<div class="home-sidebar-container">
+    <div class="sticky-container sticky">
+        
         
             
-    <div id="waline"></div>
-    <script type="module" data-swup-reload-script>
-      import { init } from '/js/libs/waline.mjs';
-
-      function loadWaline() {
-        init({
-          el: '#waline',
-          serverURL: 'https://example.example.com',
-          lang: 'zh-CN',
-          dark: 'body[class~="dark-mode"]',
-          reaction: false,
-          requiredMeta: ['nick', 'mail'],
-          emoji: [],
-          
-          
-        });
-      }
-
-      if (typeof swup !== 'undefined') {
-        loadWaline();
-      } else {
-        window.addEventListener('DOMContentLoaded', loadWaline);
-      }
-    </script>
-
-
-
-        
+                <div class="sidebar-links">
+                    <div class="site-info">
+                        <div class="site-name">21 Engineer</div>
+                        
+                    </div>
+                    
+                        
+                            
+                                <a class="links" href="/archives">
+                                    
+                                        <i class="fa-regular fa-archive icon-space"></i>
+                                    
+                                    <span class="link-name">Archives</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/tags">
+                                    
+                                        <i class="fa-regular fa-tags icon-space"></i>
+                                    
+                                    <span class="link-name">Tags</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/categories">
+                                    
+                                        <i class="fa-regular fa-folder icon-space"></i>
+                                    
+                                    <span class="link-name">Categories</span>
+                                </a>
+                            
+                        
+                    
+                </div>
+            
+            <div class="sidebar-content"  marginTop >
+                <div class="avatar flex justify-center">
+    <img src="/images/tungyu.jpg">
+</div>
+                <div class="author flex flex-col justify-center my-2.5 mx-0">
+    <div class="name">Tung-Yu Chiang</div>
+    
+        <div class="label">Lv1</div>
     
 </div>
-
-		</div>
-		
-	</div>
-
-	
-	<div class="toc-content-container">
-		<div class="post-toc-wrap">
-	<div class="post-toc">
-		<div class="toc-title">On this page</div>
-		<div class="page-title">Day-4 JWT</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-4-%E7%9B%AE%E6%A8%99"><span class="nav-text">Day 4 目標</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AFJWT"><span class="nav-text">什麼是JWT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Review"><span class="nav-text">Code Review</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT-Implementation"><span class="nav-text">JWT Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%93%AA%E9%82%8A%E4%BD%BF%E7%94%A8JWT"><span class="nav-text">在哪邊使用JWT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT-%E9%A9%97%E8%AD%89%E7%AF%84%E4%BE%8B"><span class="nav-text">JWT 驗證範例</span></a></li></ol></li></ol>
-
-	</div>
+                <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
 </div>
-	</div>
-	
+            </div>
+        
+
+    </div>
 </div>
+
+			
+
+			<div class="main-content">
+				<div class="home-content-container">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/03/04/RabbitMQ-1/">
+                            RabbitMQ (1)
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            前言之前請 GPT 幫我們安排的專案排程的 Day5 目標如下：
+
+
+
+學習內容
+實作
+
+
+
+訂單管理與支付流程
+設計訂單 API，模擬支付流程
+
+
+其中我們會需要用到包括：
+
+RabbitMQ
+Redis
+Celery
+
+其實如果以天數來安排的話，我覺得 GPT 安排的 Day 5 的工作量，也遠大於前面四天，但或許是我前面四天的概念比較熟？剛好 Day 5 都碰到我沒有碰過的工具，所以我...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Mar 04 2025 21:30:45 GMT+0800">
+                
+                    2025-03-04
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2025/03/04/RabbitMQ-1/">Read more<span class="seo-reader-text">RabbitMQ (1)</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/02/19/Day-4-JWT/">
+                            Day-4 JWT
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            Day 4 目標
+
+
+學習內容
+實作
+
+
+
+使用者驗證（JWT + OAuth2）
+用戶註冊、登入，實作 JWT 驗證與權限管理
+
+
+什麼是JWT這個很多文章都已經講得很好了，我就不在重複敘述，古古前輩我感覺寫的很清楚又簡單，可以直接閱讀那四篇跟jwt有關的文章，連接在此：古古 jwt 文章。
+Code Review這次新增
+
+User Module
+JWT
+
+JWT Implementat...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Feb 19 2025 22:23:17 GMT+0800">
+                
+                    2025-02-19
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Backend/">Backend</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2025/02/19/Day-4-JWT/">Read more<span class="seo-reader-text">Day-4 JWT</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/02/13/Day-3/">
+                            Day - 3 IoC &amp; Database
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            Day 3 目標
+
+
+學習內容
+實作
+
+
+
+資料庫（PostgreSQL + SQLAlchemy）
+設計數據庫模型，整合 SQLAlchemy 進行數據存取
+
+
+DatabaseModel vs SchemaModel（SQLAlchemy ORM 模型） → 負責資料庫👉 Model 主要是跟資料庫打交道，對應到資料庫表（table）tips : 可以理解成，Table 在fastAP...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Feb 13 2025 22:39:14 GMT+0800">
+                
+                    2025-02-13
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Backend/">Backend</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2025/02/13/Day-3/">Read more<span class="seo-reader-text">Day - 3 IoC &amp; Database</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/02/12/Day-2-FastAPI-Router/">
+                            Day 2 - FastAPI Router
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            目標
+
+
+學習內容
+實作
+
+
+
+HTTP &amp; REST API 設計
+設計商品與用戶 API 端點（CRUD 操作）
+
+
+📁 app/ 目錄結構12345├── models/     # 資料庫模型 (ORM)├── routers/    # API 路由├── schemas/    # Pydantic 模式 (資料驗證)├── services/   # 業務邏輯 (Bu...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Feb 12 2025 23:08:46 GMT+0800">
+                
+                    2025-02-12
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Backend/">Backend</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2025/02/12/Day-2-FastAPI-Router/">Read more<span class="seo-reader-text">Day 2 - FastAPI Router</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/02/11/Day-1-FastAPI-%E5%AE%89%E8%A3%9D-Python%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83/">
+                            Day 1 - FastAPI 安裝+Python虛擬環境
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            前言過年駭客松宣告失敗…過年其實有蠻多雜事要做，但主要是今年過年剛好和女友談到一些事情，心情比較不好，後來就沒有繼續完成，我只完成到 Day4，但這四天我發現跟當初在學校沒有gpt的時候相比，寫網頁的速度真的快很多，Day 1~4 基本上有摸過的人，幾小時就做完了，
+轉用 Python 開發這個決定也是蠻突然的，主要是發現蠻多新創公司好像都用 Python 或是 Golang 做為 Back...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Feb 11 2025 23:08:00 GMT+0800">
+                
+                    2025-02-11
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Backend/">Backend</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2025/02/11/Day-1-FastAPI-%E5%AE%89%E8%A3%9D-Python%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83/">Read more<span class="seo-reader-text">Day 1 - FastAPI 安裝+Python虛擬環境</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/02/09/Day-1-MVC%E6%9E%B6%E6%A7%8B/">
+                            Day 1- MVC架構
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            前言還記得前一篇文提到，我請GPT幫我做的9天計劃嗎，因為我前一陣子就有稍微碰過Spring Boot，所以今天雖然是第一天，但我把前兩天的事情都做了，不過我自己覺得應該要更快的，畢竟CRUD我在Python Flask那邊有碰過，不過我自己在資料庫的連接這邊卡了一下子才搞懂Spring Boot的設定。
+這邊其實有蠻多知識點可以輸出的，像是整個Spring Boot 裡面的觀念如IoC.....
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Feb 09 2025 21:16:22 GMT+0800">
+                
+                    2025-02-09
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2025/02/09/Day-1-MVC%E6%9E%B6%E6%A7%8B/">Read more<span class="seo-reader-text">Day 1- MVC架構</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/02/09/%E6%8A%80%E8%A1%93%E9%83%A8%E8%90%BD%E6%A0%BC%E7%9A%84%E9%96%8B%E7%AB%AF/">
+                            新年自我駭客松
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            前言每年農曆過年，我家都沒有什麼活動，尤其奶奶走了之後的幾年裡，過年很多時候都感覺到無聊，最近接觸到了很多AI議題，突然覺的或許未來會多出很多機會（不知道是不是我太樂觀），想趁這次過年來個6~8天的駭客松，我有揪實驗室的朋友一起，但每個人要做的事情都不太一樣，像是有人想要從FW轉職到DV，他們過年要動手寫5 stage mips cpu 並在FPGA上面模擬，而我則是想趁這次過年，將Back...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Feb 09 2025 21:11:28 GMT+0800">
+                
+                    2025-02-09
+                
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a href="/2025/02/09/%E6%8A%80%E8%A1%93%E9%83%A8%E8%90%BD%E6%A0%BC%E7%9A%84%E9%96%8B%E7%AB%AF/">Read more<span class="seo-reader-text">新年自我駭客松</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator px-7 py-5">
+        <div class="paginator">
+	<span class="page-number current">1</span>
+</div>
+  
+    </div>
+</div>
+
 			</div>
 
 			
@@ -843,7 +1141,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        8 posts in total
+                        7 posts in total
                     </span>
                     
                 </p>
@@ -900,26 +1198,6 @@
 		</div>
 	</div>
 
-	
-	<div class="post-tools">
-		<div class="post-tools-container">
-	<ul class="article-tools-list">
-		<!-- TOC aside toggle -->
-		
-		<li class="right-bottom-tools page-aside-toggle">
-			<i class="fa-regular fa-outdent"></i>
-		</li>
-		
-
-		<!-- go comment -->
-		
-		<li class="go-comment">
-			<i class="fa-regular fa-comments"></i>
-		</li>
-		
-	</ul>
-</div>
-	</div>
 	
 
 	<div class="right-side-tools-container">

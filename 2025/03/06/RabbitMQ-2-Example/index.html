@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2025/02/19/day-4-jwt/"/>
+    <link rel="canonical" href="http://example.com/2025/03/06/rabbitmq-2-example/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,14 +23,14 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Day-4 JWT">
-<meta property="og:url" content="http://example.com/2025/02/19/Day-4-JWT/index.html">
+<meta property="og:title" content="RabbitMQ(2) - Example">
+<meta property="og:url" content="http://example.com/2025/03/06/RabbitMQ-2-Example/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-02-19T14:23:17.000Z">
-<meta property="article:modified_time" content="2025-03-04T14:43:06.832Z">
+<meta property="article:published_time" content="2025-03-06T13:23:56.000Z">
+<meta property="article:modified_time" content="2025-03-06T13:26:27.529Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Backend">
 <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
     
     <title>
         
-            Day-4 JWT | 21 Engineer
+            RabbitMQ(2) - Example | 21 Engineer
         
     </title>
 
@@ -545,7 +545,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Day-4 JWT</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">RabbitMQ(2) - Example</h1>
 			</div>
 			
 		</div>
@@ -566,15 +566,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-02-19 22:23:17</span>
-        <span class="mobile">2025-02-19 22:23:17</span>
+        <span class="desktop">2025-03-06 21:23:56</span>
+        <span class="mobile">2025-03-06 21:23:56</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-03-04 22:43:06</span>
-            <span class="mobile">2025-03-04 22:43:06</span>
+            <span class="desktop">2025-03-06 21:26:27</span>
+            <span class="mobile">2025-03-06 21:26:27</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -612,109 +612,47 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h2 id="Day-4-目標"><a href="#Day-4-目標" class="headerlink" title="Day 4 目標"></a><strong>Day 4 目標</strong></h2><table>
-<thead>
-<tr>
-<th><strong>學習內容</strong></th>
-<th><strong>實作</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>使用者驗證（JWT + OAuth2）</td>
-<td>用戶註冊、登入，實作 JWT 驗證與權限管理</td>
-</tr>
-</tbody></table>
-<h2 id="什麼是JWT"><a href="#什麼是JWT" class="headerlink" title="什麼是JWT"></a>什麼是JWT</h2><p>這個很多文章都已經講得很好了，我就不在重複敘述，古古前輩我感覺寫的很清楚又簡單，可以直接閱讀那四篇跟jwt有關的文章，連接在此：<a class="link"   target="_blank" rel="noopener" href="https://kucw.io/blog/session-vs-jwt/" >古古 jwt 文章<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>。</p>
-<h2 id="Code-Review"><a href="#Code-Review" class="headerlink" title="Code Review"></a>Code Review</h2><p>這次新增</p>
-<ul>
-<li>User Module</li>
-<li>JWT</li>
-</ul>
-<h3 id="JWT-Implementation"><a href="#JWT-Implementation" class="headerlink" title="JWT Implementation"></a>JWT Implementation</h3><p>這節會分享一些 jwt api 串接的實作</p>
-<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">SECRET_KEY = <span class="string">&quot;your_secret_key&quot;</span></span><br><span class="line">ALGORITHM = <span class="string">&quot;HS256&quot;</span></span><br><span class="line">ACCESS_TOKEN_EXPIRE_MINUTES = <span class="number">30</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JWTService</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, secret_key: <span class="built_in">str</span> = SECRET_KEY, algorithm: <span class="built_in">str</span> = ALGORITHM, access_token_expire_minutes: <span class="built_in">int</span> = ACCESS_TOKEN_EXPIRE_MINUTES</span>):</span><br><span class="line">        <span class="variable language_">self</span>.secret_key = secret_key</span><br><span class="line">        <span class="variable language_">self</span>.algorithm = algorithm</span><br><span class="line">        <span class="variable language_">self</span>.access_token_expire_minutes = access_token_expire_minutes</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">create_access_token</span>(<span class="params">self, data: <span class="built_in">dict</span>, expires_delta: timedelta = <span class="literal">None</span></span>):</span><br><span class="line">        to_encode = data.copy()</span><br><span class="line">        <span class="keyword">if</span> expires_delta:</span><br><span class="line">            expire = datetime.utcnow() + expires_delta</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            expire = datetime.utcnow() + timedelta(minutes=<span class="variable language_">self</span>.access_token_expire_minutes)</span><br><span class="line">        to_encode.update(&#123;<span class="string">&quot;exp&quot;</span>: expire&#125;)</span><br><span class="line">        encoded_jwt = jwt.encode(to_encode, <span class="variable language_">self</span>.secret_key, algorithm=<span class="variable language_">self</span>.algorithm)</span><br><span class="line">        <span class="keyword">return</span> encoded_jwt </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decode_access_token</span>(<span class="params">self, token: <span class="built_in">str</span></span>):</span><br><span class="line">        <span class="keyword">return</span> jwt.decode(token, <span class="variable language_">self</span>.secret_key, algorithms=[<span class="variable language_">self</span>.algorithm])</span><br></pre></td></tr></table></figure></div>
-<p>這邊可以看到兩個主要Function：</p>
-<ul>
-<li>create_access_token</li>
-<li>decode_access_token</li>
-</ul>
-<h4 id="create-access-token"><a href="#create-access-token" class="headerlink" title="create_access_token"></a>create_access_token</h4><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_access_token</span>(<span class="params">self, data: <span class="built_in">dict</span>, expires_delta: timedelta = <span class="literal">None</span></span>):</span><br><span class="line">        to_encode = data.copy()</span><br><span class="line">        <span class="keyword">if</span> expires_delta:</span><br><span class="line">            expire = datetime.utcnow() + expires_delta</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            expire = datetime.utcnow() + timedelta(minutes=<span class="variable language_">self</span>.access_token_expire_minutes)</span><br><span class="line">        to_encode.update(&#123;<span class="string">&quot;exp&quot;</span>: expire&#125;)</span><br><span class="line">        encoded_jwt = jwt.encode(to_encode, <span class="variable language_">self</span>.secret_key, algorithm=<span class="variable language_">self</span>.algorithm)</span><br><span class="line">        <span class="keyword">return</span> encoded_jwt </span><br></pre></td></tr></table></figure></div>
-<p><strong>產生 JWT Token</strong>，主要流程如下：</p>
+			<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>這邊 GPT 請生成一個簡單的 RabbitMQ 範例，這我其實有猶豫要不要放，但完整的學習目前是這樣，只不過我不太需要自己撰寫筆記，因為GPT寫的比我還要完整，這部分我會再斟酌一下。</p>
+<p>這個範例會：</p>
 <ol>
-<li><code>to_encode = data.copy()</code>：複製傳入的 <code>data</code>（通常是用戶 ID 或其他身份相關資訊）。</li>
-<li>計算 <strong>過期時間</strong>：<ul>
-<li>如果 <code>expires_delta</code> 被提供，則使用它來計算過期時間。</li>
-<li>否則，使用預設的 <code>ACCESS_TOKEN_EXPIRE_MINUTES</code>（30 分鐘）。</li>
-</ul>
-</li>
-<li><code>to_encode.update(&#123;&quot;exp&quot;: expire&#125;)</code>：將過期時間（<code>exp</code>）加入到 JWT 的 Payload。</li>
-<li>使用 <code>jwt.encode()</code> 進行編碼，並回傳 JWT Token。</li>
+<li><strong>Producer</strong>（生產者）發送一條訊息到 <strong>“hello”</strong> 佇列</li>
+<li><strong>Consumer</strong>（消費者）從 <strong>“hello”</strong> 佇列接收並打印訊息</li>
 </ol>
-<h4 id="decode-access-token"><a href="#decode-access-token" class="headerlink" title="decode_access_token"></a>decode_access_token</h4><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python</span><br><span class="line">CopyEdit</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decode_access_token</span>(<span class="params">self, token: <span class="built_in">str</span></span>):</span><br><span class="line">    <span class="keyword">return</span> jwt.decode(token, <span class="variable language_">self</span>.secret_key, algorithms=[<span class="variable language_">self</span>.algorithm])</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<hr>
+<h3 id="1-Producer-發送訊息"><a href="#1-Producer-發送訊息" class="headerlink" title="(1) Producer - 發送訊息"></a><strong>(1) Producer - 發送訊息</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pika</span><br><span class="line"></span><br><span class="line"><span class="comment"># 連接到 RabbitMQ 伺服器</span></span><br><span class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(<span class="string">&#x27;localhost&#x27;</span>))</span><br><span class="line">channel = connection.channel()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 確保佇列存在</span></span><br><span class="line">channel.queue_declare(queue=<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 發送訊息</span></span><br><span class="line">channel.basic_publish(exchange=<span class="string">&#x27;&#x27;</span>, routing_key=<span class="string">&#x27;hello&#x27;</span>, body=<span class="string">&#x27;Hello RabbitMQ!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot; [x] Sent &#x27;Hello RabbitMQ!&#x27;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 關閉連線</span></span><br><span class="line">connection.close()</span><br></pre></td></tr></table></figure></div>
 
-<p><strong>解碼 JWT Token</strong>，主要流程：</p>
-<ol>
-<li><code>jwt.decode()</code> 會解析 JWT 並驗證：<ul>
-<li>Token 是否有效</li>
-<li>Token 是否過期（<code>exp</code>）</li>
-<li>Token 是否使用正確的密鑰與演算法</li>
+<p>這段程式碼會：</p>
+<ul>
+<li>連接到 RabbitMQ</li>
+<li>確保 <code>hello</code> 佇列存在</li>
+<li>發送 <code>&quot;Hello RabbitMQ!&quot;</code> 到 <code>hello</code> 佇列</li>
+<li>關閉連線</li>
 </ul>
+<hr>
+<h3 id="2-Consumer-接收訊息"><a href="#2-Consumer-接收訊息" class="headerlink" title="(2) Consumer - 接收訊息"></a><strong>(2) Consumer - 接收訊息</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pika</span><br><span class="line"></span><br><span class="line"><span class="comment"># 連接到 RabbitMQ 伺服器</span></span><br><span class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(<span class="string">&#x27;localhost&#x27;</span>))</span><br><span class="line">channel = connection.channel()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 確保佇列存在</span></span><br><span class="line">channel.queue_declare(queue=<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 處理收到的訊息</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">callback</span>(<span class="params">ch, method, properties, body</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot; [x] Received <span class="subst">&#123;body.decode()&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 訂閱佇列</span></span><br><span class="line">channel.basic_consume(queue=<span class="string">&#x27;hello&#x27;</span>, on_message_callback=callback, auto_ack=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27; [*] Waiting for messages. To exit press CTRL+C&#x27;</span>)</span><br><span class="line">channel.start_consuming(</span><br></pre></td></tr></table></figure></div>
+
+<p>這段程式碼會：</p>
+<ul>
+<li>連接到 RabbitMQ</li>
+<li>確保 <code>hello</code> 佇列存在</li>
+<li>設定 <code>callback</code> 來處理收到的訊息</li>
+<li>開始監聽並接收來自 <code>hello</code> 佇列的訊息</li>
+</ul>
+<hr>
+<h3 id="3-執行方式"><a href="#3-執行方式" class="headerlink" title="3. 執行方式"></a><strong>3. 執行方式</strong></h3><ol>
+<li><p><strong>先執行</strong> 消費者（Consumer）：</p>
+ <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python consumer.py</span><br></pre></td></tr></table></figure></div>
+<p> 它會開始等待訊息：</p>
+ <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[*] Waiting for messages. To exit press CTRL+C</span><br></pre></td></tr></table></figure></div>
 </li>
-<li>如果成功，回傳解碼後的資料。</li>
-<li>如果失敗（例如 Token 過期或密鑰錯誤），則會拋出 <code>jwt.ExpiredSignatureError</code> 或 <code>jwt.InvalidTokenError</code>。</li>
+<li><p><strong>再執行</strong> 生產者（Producer）：</p>
+ <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python producer.py</span><br></pre></td></tr></table></figure></div>
+<p> 它會發送一條訊息，並輸出：</p>
+ <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x] Sent &#x27;Hello RabbitMQ!&#x27;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Consumer 會收到並輸出：</strong></p>
+ <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x] Received Hello RabbitMQ!</span><br></pre></td></tr></table></figure></div></li>
 </ol>
-<h3 id="在哪邊使用JWT"><a href="#在哪邊使用JWT" class="headerlink" title="在哪邊使用JWT"></a>在哪邊使用JWT</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@router.post(<span class="params"><span class="string">&quot;/login&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">login_for_access_token</span>(<span class="params">form_data: OAuth2PasswordRequestForm = Depends(<span class="params"></span>), db: Session = Depends(<span class="params">get_db</span>)</span>):</span><br><span class="line">    user = authenticate_user(db, form_data.username, form_data.password)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> user:</span><br><span class="line">        <span class="keyword">raise</span> HTTPException(status_code=<span class="number">400</span>, detail=<span class="string">&quot;Incorrect username or password&quot;</span>)</span><br><span class="line">    access_token = create_access_token(data=&#123;<span class="string">&quot;sub&quot;</span>: user.username&#125;)</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;access_token&quot;</span>: access_token, <span class="string">&quot;token_type&quot;</span>: <span class="string">&quot;bearer&quot;</span>&#125; </span><br></pre></td></tr></table></figure></div>
-<p>這個 function 是在驗證使用者是否存在及密碼是否正確，若是正確則創建一個jwt token 並回傳給前端</p>
-<ul>
-<li><strong>OAuth2PasswordRequestForm</strong> 是 FastAPI 提供的 <strong>表單驗證</strong>，用於獲取 <code>username</code> 和 <code>password</code>。</li>
-</ul>
-<p>也因此我們使用 postman 驗證的時候並不是在 body 傳送 json 資料，而是使用x-www-form-urlencoded，並輸入</p>
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>username</td>
-<td>your_user_name</td>
-</tr>
-<tr>
-<td>password</td>
-<td>yoou_password</td>
-</tr>
-</tbody></table>
-<h3 id="JWT-驗證範例"><a href="#JWT-驗證範例" class="headerlink" title="JWT 驗證範例"></a>JWT 驗證範例</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@router.post(<span class="params"><span class="string">&quot;/products/&quot;</span>, response_model=ProductSchema</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">create_product_endpoint</span>(<span class="params">product: ProductSchema, db: Session = Depends(<span class="params">get_db</span>), current_user: User = Depends(<span class="params">get_current_user</span>)</span>):</span><br><span class="line">    <span class="keyword">return</span> create_product(db, product)</span><br></pre></td></tr></table></figure></div>
-<p>在我們原本的 router 上面我們加上了 <code>current_user: User = Depends(get_current_user)</code></p>
-<ul>
-<li>這個 <code>get_current_user()</code> 會：<ul>
-<li><strong>從 <code>Authorization: Bearer &lt;token&gt;</code> 解析 JWT</strong>。</li>
-<li><strong>驗證 Token 是否有效（未過期、未修改、密鑰正確）</strong>。</li>
-<li><strong>回傳解碼後的 <code>User</code> 資訊</strong>（例如 <code>username</code>、<code>user_id</code>）。</li>
-</ul>
-</li>
-<li><strong>沒有 Token 或 Token 無效</strong>：<ul>
-<li>FastAPI <strong>會直接回傳 <code>401 Unauthorized</code>，不會執行 <code>delete_product_endpoint</code></strong>。</li>
-</ul>
-</li>
-<li><strong>影響：</strong><ul>
-<li>原本的 <code>JWTService</code> 的 <code>decode_access_token()</code> 方法會被 <code>get_current_user()</code> 使用。</li>
-<li>這確保只有<strong>登入的使用者</strong>才能創造產品。</li>
-</ul>
-</li>
-</ul>
-<h4 id="PostMan-測試"><a href="#PostMan-測試" class="headerlink" title="PostMan 測試"></a>PostMan 測試</h4><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/jwt1.png"
-                      alt="jwt test faild"
-                >如上圖，如果我們沒有帶入 jwt token 就直接創造一個商品，FastAPI 會直接回傳 <code>401 Unauthorized</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/images/post/jwt2.png"
-                      alt="jwt test success"
-                ><br>當我們帶入登入後所獲得的 jwt ， API 才能通過審核，被合理的使用</p>
 
 		</div>
 
@@ -735,23 +673,11 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/03/04/RabbitMQ-1/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">RabbitMQ (1)</span>
-						<span class="post-nav-item">Prev posts</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/02/13/Day-3/">
+				<a class="next" rel="next" href="/2025/03/04/RabbitMQ-1/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">Day - 3 IoC &amp; Database</span>
+						<span class="post-nav-title-item">RabbitMQ (1)</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -815,8 +741,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">Day-4 JWT</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-4-%E7%9B%AE%E6%A8%99"><span class="nav-text">Day 4 目標</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AFJWT"><span class="nav-text">什麼是JWT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Review"><span class="nav-text">Code Review</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT-Implementation"><span class="nav-text">JWT Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%93%AA%E9%82%8A%E4%BD%BF%E7%94%A8JWT"><span class="nav-text">在哪邊使用JWT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT-%E9%A9%97%E8%AD%89%E7%AF%84%E4%BE%8B"><span class="nav-text">JWT 驗證範例</span></a></li></ol></li></ol>
+		<div class="page-title">RabbitMQ(2) - Example</div>
+		<ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Producer-%E7%99%BC%E9%80%81%E8%A8%8A%E6%81%AF"><span class="nav-text">(1) Producer - 發送訊息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Consumer-%E6%8E%A5%E6%94%B6%E8%A8%8A%E6%81%AF"><span class="nav-text">(2) Consumer - 接收訊息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%9F%B7%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="nav-text">3. 執行方式</span></a></li></ol>
 
 	</div>
 </div>
